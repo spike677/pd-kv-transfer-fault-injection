@@ -1,0 +1,4 @@
+# Preserve source/evidence bytes: pinned SHA256 must survive Windows clones.
+* -text
+*.sh text eol=lf
+evidence/** whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

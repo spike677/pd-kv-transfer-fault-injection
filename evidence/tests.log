@@ -1,0 +1,24 @@
+test_bad_ttl (test_runtime.Tests.test_bad_ttl) ... ok
+test_bootstrap_is_lazy (test_runtime.Tests.test_bootstrap_is_lazy) ... ok
+test_control_wrong_json_type (test_runtime.Tests.test_control_wrong_json_type) ... ok
+test_dev_gate (test_runtime.Tests.test_dev_gate) ... ok
+test_disarm (test_runtime.Tests.test_disarm) ... ok
+test_duplicate (test_runtime.Tests.test_duplicate) ... ok
+test_empty_blocks (test_runtime.Tests.test_empty_blocks) ... ok
+test_expiry (test_runtime.Tests.test_expiry) ... ok
+test_hash_gate (test_runtime.Tests.test_hash_gate) ... ok
+test_invalid_control (test_runtime.Tests.test_invalid_control) ... ok
+test_native_two_errors_and_restore (test_runtime.Tests.test_native_two_errors_and_restore) ... ok
+test_next_transfer (test_runtime.Tests.test_next_transfer) ... ok
+test_no_rearm_overwrite (test_runtime.Tests.test_no_rearm_overwrite) ... ok
+test_owner (test_runtime.Tests.test_owner) ... ok
+test_owner_lost (test_runtime.Tests.test_owner_lost) ... ok
+test_race (test_runtime.Tests.test_race) ... ok
+test_sitecustomize_startup (test_runtime.Tests.test_sitecustomize_startup) ... ok
+test_wrong_engine (test_runtime.Tests.test_wrong_engine) ... ok
+test_wrong_request (test_runtime.Tests.test_wrong_request) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.476s
+
+OK

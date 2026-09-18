@@ -1,0 +1,86 @@
+{
+  "tests_passed": 19,
+  "source_sha256": "275bee054b182e1c6177ec6e5c6ce3f0deb6afa7dcd43cd66d9ef274d9231316",
+  "evidence_level": "PINNED_NATIVE_METHODS_HOST_FIXTURE",
+  "ret_neg1_native_log_chain": "PASS",
+  "bfr": [
+    {
+      "phase": "B",
+      "transport_fixture_calls": 1,
+      "receiver_bytes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "finished_requests": [
+        "D-request"
+      ]
+    },
+    {
+      "phase": "F",
+      "transport_fixture_calls": 0,
+      "receiver_bytes": [
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205,
+        205
+      ],
+      "finished_requests": [
+        "D-request"
+      ]
+    },
+    {
+      "phase": "R",
+      "transport_fixture_calls": 1,
+      "receiver_bytes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "finished_requests": [
+        "D-request"
+      ]
+    }
+  ],
+  "model_e2e": "NOT_TESTED",
+  "current_github_main": "UNSUPPORTED",
+  "old_handler_still_marks_finished": true
+}

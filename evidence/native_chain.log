@@ -1,0 +1,12 @@
+WARNING runtime.py:26 [PD-KV-FAULT] fault_injected=true mode=RET_NEG1 arm_id=e00c91a6a9014c37903318636958a58b request_id='D-request' remote_request_id='P-request'
+ERROR mooncake_connector.py:548 Mooncake transfer failed for request P-request
+ERROR mooncake_connector.py:441 Failed to transfer KV cache for request P-request: Mooncake transfer failed, ret: -1
+Traceback (most recent call last):
+  File "C:\Users\admin\Documents\pd-kv-fault\tests\source_snapshot\mooncake_connector.py", line 438, in _handle_request
+    self._transfer_kv_cache(req_meta)
+  File "C:\Users\admin\Documents\pd-kv-fault\pd_kv_fault\runtime.py", line 62, in wrapped
+    try:return original(ReceiverView(receiver,proxy),meta)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Documents\pd-kv-fault\tests\source_snapshot\mooncake_connector.py", line 549, in _transfer_kv_cache
+    raise RuntimeError(f"Mooncake transfer failed, ret: {ret}")
+RuntimeError: Mooncake transfer failed, ret: -1
