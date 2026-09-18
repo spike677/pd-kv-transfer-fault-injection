@@ -14,7 +14,14 @@ BINDING=None
 def attach(module):
     global BINDING
     if BINDING is not None:raise RuntimeError('duplicate bootstrap')
-    BINDING=Binding(module,Control(os.environ['PD_FAULT_DIR'],os.environ['PD_FAULT_OWNER'],os.environ['PD_FAULT_ENGINE']))
+    if os.environ.get('PD_FAULT_ENGINE_BASE'):
+        from .identity import Settings
+        from .scoped import ScopedControl
+        c=ScopedControl(os.environ['PD_FAULT_DIR'],os.environ['PD_FAULT_OWNER'],Settings.from_env(),
+                        getattr(module,'get_pp_group',None))
+    else:
+        c=Control(os.environ['PD_FAULT_DIR'],os.environ['PD_FAULT_OWNER'],os.environ['PD_FAULT_ENGINE'])
+    BINDING=Binding(module,c)
 
 class Loader(importlib.abc.Loader):
     def __init__(self,real):self.real=real
@@ -31,9 +38,11 @@ class Finder(importlib.abc.MetaPathFinder):
 
 def activate():
     if os.environ.get('PD_FAULT_ENABLE')!='1':return
-    if os.environ.get('VLLM_SERVER_DEV_MODE')!='1' or os.environ.get('PD_FAULT_SIDE')!='decode':
+    if os.environ.get('VLLM_SERVER_DEV_MODE')!='1' or os.environ.get('PD_FAULT_ROLE',os.environ.get('PD_FAULT_SIDE'))!='decode':
         raise RuntimeError('explicit developer Decode process required')
-    for key in ('PD_FAULT_DIR','PD_FAULT_OWNER','PD_FAULT_ENGINE'):
+    keys=['PD_FAULT_DIR','PD_FAULT_OWNER']
+    keys+=['PD_FAULT_DEPLOYMENT_ID','PD_FAULT_ENGINE_BASE','PD_FAULT_SESSION_ID'] if os.environ.get('PD_FAULT_ENGINE_BASE') else ['PD_FAULT_ENGINE']
+    for key in keys:
         if not os.environ.get(key):raise RuntimeError('missing '+key)
     if MODULE in sys.modules:attach(sys.modules[MODULE])
     elif not any(isinstance(f,Finder) for f in sys.meta_path):sys.meta_path.insert(0,Finder())

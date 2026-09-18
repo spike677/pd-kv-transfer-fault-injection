@@ -1,5 +1,5 @@
 {
-  "tests_passed": 19,
+  "tests_passed": 45,
   "source_sha256": "275bee054b182e1c6177ec6e5c6ce3f0deb6afa7dcd43cd66d9ef274d9231316",
   "evidence_level": "PINNED_NATIVE_METHODS_HOST_FIXTURE",
   "ret_neg1_native_log_chain": "PASS",

@@ -1,0 +1,41 @@
+{
+  "result": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "2731a6d3f8f54795899e7010e4286b22",
+    "expected": 4,
+    "overridden": 4,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "processes": [
+    [
+      "nodeB",
+      3,
+      "PASS"
+    ],
+    [
+      "nodeB",
+      2,
+      "PASS"
+    ],
+    [
+      "nodeA",
+      0,
+      "PASS"
+    ],
+    [
+      "nodeA",
+      1,
+      "PASS"
+    ]
+  ]
+}

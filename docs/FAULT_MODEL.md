@@ -1,5 +1,9 @@
 # 故障定义：PD_KV_TRANSFER_INTERRUPTION
 
+下表记录v0.1的冻结证据边界；v0.2新增的多进程/多节点**离线**能力与限制，
+见 [多rank手册](MULTI_RANK_MULTI_NODE.md) 和 [验证状态](SCOPED_VALIDATION.md)。
+v0.2尚未获得A3在线E2E证据，不覆盖或升级本页历史结论。
+
 | 字段 | 当前定义 |
 |---|---|
 | 项目性质 | 独立实验工具；有损故障注入 |

@@ -1,0 +1,216 @@
+test_bad_ttl (test_runtime.Tests.test_bad_ttl) ... ok
+test_bootstrap_is_lazy (test_runtime.Tests.test_bootstrap_is_lazy) ... ok
+test_control_wrong_json_type (test_runtime.Tests.test_control_wrong_json_type) ... ok
+test_dev_gate (test_runtime.Tests.test_dev_gate) ... ok
+test_disarm (test_runtime.Tests.test_disarm) ... ok
+test_duplicate (test_runtime.Tests.test_duplicate) ... ok
+test_empty_blocks (test_runtime.Tests.test_empty_blocks) ... ok
+test_expiry (test_runtime.Tests.test_expiry) ... ok
+test_hash_gate (test_runtime.Tests.test_hash_gate) ... ok
+test_invalid_control (test_runtime.Tests.test_invalid_control) ... ok
+test_native_two_errors_and_restore (test_runtime.Tests.test_native_two_errors_and_restore) ... ok
+test_next_transfer (test_runtime.Tests.test_next_transfer) ... ok
+test_no_rearm_overwrite (test_runtime.Tests.test_no_rearm_overwrite) ... ok
+test_owner (test_runtime.Tests.test_owner) ... ok
+test_owner_lost (test_runtime.Tests.test_owner_lost) ... ok
+test_race (test_runtime.Tests.test_race) ... ok
+test_sitecustomize_startup (test_runtime.Tests.test_sitecustomize_startup) ... ok
+test_wrong_engine (test_runtime.Tests.test_wrong_engine) ... ok
+test_wrong_request (test_runtime.Tests.test_wrong_request) ... ok
+test_aggregator_does_not_count_forged_or_mixed (test_scoped.ScopeTests.test_aggregator_does_not_count_forged_or_mixed) ... ok
+test_aggregator_duplicate_input_files (test_scoped.ScopeTests.test_aggregator_duplicate_input_files) ... ok
+test_claim_without_override (test_scoped.ScopeTests.test_claim_without_override) ... ok
+test_cli_plan_arm_aggregate (test_scoped.ScopeTests.test_cli_plan_arm_aggregate) ... ok
+test_disarm_before_override (test_scoped.ScopeTests.test_disarm_before_override) ... ok
+test_duplicate (test_scoped.ScopeTests.test_duplicate) ... ok
+test_engine_matching (test_scoped.ScopeTests.test_engine_matching) ... ok
+test_exact_selector (test_scoped.ScopeTests.test_exact_selector) ... ok
+test_expiry (test_scoped.ScopeTests.test_expiry) ... ok
+test_mixed_restart (test_scoped.ScopeTests.test_mixed_restart) ... ok
+test_multinode_four_and_partial (test_scoped.ScopeTests.test_multinode_four_and_partial) ... ok
+test_multiprocessing_tp2 (test_scoped.ScopeTests.test_multiprocessing_tp2) ... ok
+test_replay (test_scoped.ScopeTests.test_replay) ... ok
+test_restart_after_disarm (test_scoped.ScopeTests.test_restart_after_disarm) ... ok
+test_restart_during_arm (test_scoped.ScopeTests.test_restart_during_arm) ... ok
+test_role_crosscheck (test_scoped.ScopeTests.test_role_crosscheck) ... ok
+test_size_mismatch (test_scoped.ScopeTests.test_size_mismatch) ... ok
+test_stale_registration_process (test_scoped.ScopeTests.test_stale_registration_process) ... ok
+test_topology_incomplete (test_scoped.ScopeTests.test_topology_incomplete) ... ok
+test_tp1 (test_scoped.ScopeTests.test_tp1) ... ok
+test_tp2_completion (test_scoped.ScopeTests.test_tp2_completion) ... ok
+test_unknown_rank (test_scoped.ScopeTests.test_unknown_rank) ... ok
+test_wrong_deployment (test_scoped.ScopeTests.test_wrong_deployment) ... ok
+test_wrong_engine (test_scoped.ScopeTests.test_wrong_engine) ... ok
+test_wrong_node (test_scoped.ScopeTests.test_wrong_node) ... ok
+test_wrong_request (test_scoped.ScopeTests.test_wrong_request) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 8.868s
+
+OK
+{
+  "tp2": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "c37e071550854a6390362c7222e260e1",
+    "expected": 2,
+    "overridden": 2,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_two_node_simulation": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "49b3a867ec644692882035f4b2d18b37",
+    "expected": 4,
+    "overridden": 4,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_missing_one": {
+    "status": "PARTIAL",
+    "arm_id": "49b3a867ec644692882035f4b2d18b37",
+    "expected": 4,
+    "overridden": 3,
+    "missing_participants": [
+      "deployment/D0/nodeB/dp0/pp0/tp3"
+    ],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "evidence_level": "MULTIPROCESS_PINNED_NATIVE_METHODS_HOST_FIXTURE",
+  "a3_single_node_tp2_e2e": "BLOCKED_NO_A3_CONNECTION",
+  "multi_node_hardware_e2e": "NOT_CLAIMED"
+}
+test_bad_ttl (test_runtime.Tests.test_bad_ttl) ... ok
+test_bootstrap_is_lazy (test_runtime.Tests.test_bootstrap_is_lazy) ... ok
+test_control_wrong_json_type (test_runtime.Tests.test_control_wrong_json_type) ... ok
+test_dev_gate (test_runtime.Tests.test_dev_gate) ... ok
+test_disarm (test_runtime.Tests.test_disarm) ... ok
+test_duplicate (test_runtime.Tests.test_duplicate) ... ok
+test_empty_blocks (test_runtime.Tests.test_empty_blocks) ... ok
+test_expiry (test_runtime.Tests.test_expiry) ... ok
+test_hash_gate (test_runtime.Tests.test_hash_gate) ... ok
+test_invalid_control (test_runtime.Tests.test_invalid_control) ... ok
+test_native_two_errors_and_restore (test_runtime.Tests.test_native_two_errors_and_restore) ... ok
+test_next_transfer (test_runtime.Tests.test_next_transfer) ... ok
+test_no_rearm_overwrite (test_runtime.Tests.test_no_rearm_overwrite) ... ok
+test_owner (test_runtime.Tests.test_owner) ... ok
+test_owner_lost (test_runtime.Tests.test_owner_lost) ... ok
+test_race (test_runtime.Tests.test_race) ... ok
+test_sitecustomize_startup (test_runtime.Tests.test_sitecustomize_startup) ... ok
+test_wrong_engine (test_runtime.Tests.test_wrong_engine) ... ok
+test_wrong_request (test_runtime.Tests.test_wrong_request) ... ok
+test_aggregator_does_not_count_forged_or_mixed (test_scoped.ScopeTests.test_aggregator_does_not_count_forged_or_mixed) ... ok
+test_aggregator_duplicate_input_files (test_scoped.ScopeTests.test_aggregator_duplicate_input_files) ... ok
+test_claim_without_override (test_scoped.ScopeTests.test_claim_without_override) ... ok
+test_cli_plan_arm_aggregate (test_scoped.ScopeTests.test_cli_plan_arm_aggregate) ... ok
+test_disarm_before_override (test_scoped.ScopeTests.test_disarm_before_override) ... ok
+test_duplicate (test_scoped.ScopeTests.test_duplicate) ... ok
+test_engine_matching (test_scoped.ScopeTests.test_engine_matching) ... ok
+test_exact_selector (test_scoped.ScopeTests.test_exact_selector) ... ok
+test_expiry (test_scoped.ScopeTests.test_expiry) ... ok
+test_mixed_restart (test_scoped.ScopeTests.test_mixed_restart) ... ok
+test_multinode_four_and_partial (test_scoped.ScopeTests.test_multinode_four_and_partial) ... ok
+test_multiprocessing_tp2 (test_scoped.ScopeTests.test_multiprocessing_tp2) ... ok
+test_replay (test_scoped.ScopeTests.test_replay) ... ok
+test_restart_after_disarm (test_scoped.ScopeTests.test_restart_after_disarm) ... ok
+test_restart_during_arm (test_scoped.ScopeTests.test_restart_during_arm) ... ok
+test_role_crosscheck (test_scoped.ScopeTests.test_role_crosscheck) ... ok
+test_size_mismatch (test_scoped.ScopeTests.test_size_mismatch) ... ok
+test_stale_registration_process (test_scoped.ScopeTests.test_stale_registration_process) ... ok
+test_topology_incomplete (test_scoped.ScopeTests.test_topology_incomplete) ... ok
+test_tp1 (test_scoped.ScopeTests.test_tp1) ... ok
+test_tp2_completion (test_scoped.ScopeTests.test_tp2_completion) ... ok
+test_unknown_rank (test_scoped.ScopeTests.test_unknown_rank) ... ok
+test_wrong_deployment (test_scoped.ScopeTests.test_wrong_deployment) ... ok
+test_wrong_engine (test_scoped.ScopeTests.test_wrong_engine) ... ok
+test_wrong_node (test_scoped.ScopeTests.test_wrong_node) ... ok
+test_wrong_request (test_scoped.ScopeTests.test_wrong_request) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 8.406s
+
+OK
+{
+  "tp2": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "a71f89b4c38f4b1b9f46d2e511f8a742",
+    "expected": 2,
+    "overridden": 2,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_two_node_simulation": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "2731a6d3f8f54795899e7010e4286b22",
+    "expected": 4,
+    "overridden": 4,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_missing_one": {
+    "status": "PARTIAL",
+    "arm_id": "2731a6d3f8f54795899e7010e4286b22",
+    "expected": 4,
+    "overridden": 3,
+    "missing_participants": [
+      "deployment/D0/nodeB/dp0/pp0/tp3"
+    ],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "evidence_level": "MULTIPROCESS_PINNED_NATIVE_METHODS_HOST_FIXTURE",
+  "a3_single_node_tp2_e2e": "BLOCKED_NO_A3_CONNECTION",
+  "multi_node_hardware_e2e": "NOT_CLAIMED"
+}

@@ -1,6 +1,6 @@
-{"engine": "D0", "event": "installed", "method": "_transfer_kv_cache", "owner": "offline-demo", "pid": 21364, "source_sha256": "275bee054b182e1c6177ec6e5c6ce3f0deb6afa7dcd43cd66d9ef274d9231316", "time_ns": 1789713204696453100}
-{"config": {"arm_id": "e00c91a6a9014c37903318636958a58b", "engine": "D0", "expires_at": 1789713324.697959, "mode": "RET_NEG1", "next_transfer": false, "owner": "offline-demo", "request_id": "D-request"}, "engine": "D0", "event": "armed", "owner": "offline-demo", "pid": 21364, "time_ns": 1789713204697958800}
-{"arm_id": "e00c91a6a9014c37903318636958a58b", "engine": "D0", "event": "claimed", "mode": "RET_NEG1", "owner": "offline-demo", "pid": 21364, "remote_request_id": "P-request", "request_id": "D-request", "time_ns": 1789713204697958800}
-{"arm_id": "e00c91a6a9014c37903318636958a58b", "engine": "D0", "event": "return_override", "fault_injected": true, "owner": "offline-demo", "pid": 21364, "remote_request_id": "P-request", "request_id": "D-request", "ret": -1, "time_ns": 1789713204699464700}
-{"engine": "D0", "event": "disarmed", "owner": "offline-demo", "pid": 21364, "time_ns": 1789713204700646800}
-{"engine": "D0", "event": "uninstalled", "owner": "offline-demo", "pid": 21364, "time_ns": 1789713204700646800}
+{"engine": "D0", "event": "installed", "method": "_transfer_kv_cache", "owner": "offline-demo", "pid": 6364, "source_sha256": "275bee054b182e1c6177ec6e5c6ce3f0deb6afa7dcd43cd66d9ef274d9231316", "time_ns": 1789722557121316100}
+{"config": {"arm_id": "53088c2879e74d97b00061e145162fbf", "engine": "D0", "expires_at": 1789722677.122853, "mode": "RET_NEG1", "next_transfer": false, "owner": "offline-demo", "request_id": "D-request"}, "engine": "D0", "event": "armed", "owner": "offline-demo", "pid": 6364, "time_ns": 1789722557122853000}
+{"arm_id": "53088c2879e74d97b00061e145162fbf", "engine": "D0", "event": "claimed", "mode": "RET_NEG1", "owner": "offline-demo", "pid": 6364, "remote_request_id": "P-request", "request_id": "D-request", "time_ns": 1789722557124359000}
+{"arm_id": "53088c2879e74d97b00061e145162fbf", "engine": "D0", "event": "return_override", "fault_injected": true, "owner": "offline-demo", "pid": 6364, "remote_request_id": "P-request", "request_id": "D-request", "ret": -1, "time_ns": 1789722557124359000}
+{"engine": "D0", "event": "disarmed", "owner": "offline-demo", "pid": 6364, "time_ns": 1789722557125871700}
+{"engine": "D0", "event": "uninstalled", "owner": "offline-demo", "pid": 6364, "time_ns": 1789722557125871700}

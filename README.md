@@ -1,5 +1,18 @@
 # PD KV Transfer Fault Injection（独立故障注入项目）
 
+## v0.2 / multi-rank 分支状态
+
+新控制层支持 topology identity、严格 engine-base UUID 匹配、逐participant claim、
+本节点多进程锁、不可变manifest分发和离线全局汇总。
+
+- **离线已测**：Windows多进程、Linux flock、多进程TP2原生方法夹具；两节点目录TP4模拟。
+- **A3 单机 TP2在线E2E：BLOCKED**，本会话未提供对应A3连接/容器；当前可访问入口仍是A2卡2/5。
+- **MULTI_NODE_HARDWARE_E2E_NOT_CLAIMED**。
+- 新使用方法见 [多rank/多节点手册](docs/MULTI_RANK_MULTI_NODE.md)，验收见 [本轮状态](docs/SCOPED_VALIDATION.md)。
+
+下方单worker命令作为v0.1历史兼容说明保留。**TP2必须使用schema v2和ENGINE_BASE，
+不能沿用单marker的v0.1控制器。** 不因架构实现而把online状态改为PASS。
+
 **类别：有损故障注入，不是日志模拟。** 默认 `RET_NEG1` 会跳过目标请求本次真实
 KV传输并驱动原生异常处理，可能干扰推理输出、导致请求失败或触发重算；具体表现由
 部署版本决定。**当前只完成组件级证据，尚未证明在线模型输出错误或完整服务恢复。**
@@ -79,7 +92,8 @@ hash就宣称兼容。对应新版本需要独立适配和测试。没有 `--for
 旧版原生 handler 出错后仍可能在 finally 标记 finished。这个项目保留原行为，
 不会偷偷实现 fail/recompute；**HTTP200不等于真实 KV传输成功，错误日志也不等于请求必然500**。
 
-本版19项离线测试通过，实际执行锁定源码中的原生方法，验证两层日志、一次命中、
+v0.1冻结基线为19项离线测试通过；v0.2的完整测试数量见 `evidence/tests.log`。
+测试实际执行锁定源码中的原生方法，验证两层日志、一次命中、
 原 engine 未改变、B/F/R与恢复。测试传输为显式 CPU fixture，不是模型服务。
 前一轮另有实际安装类的 CONNECTOR_FAIL 验证；不能挪用为本版 RET_NEG1 在线证据。
 **本版服务启动挂载和模型 E2E 尚未验证。** 当前A2正常Mooncake通信仍受设备IP重复阻断。
@@ -105,7 +119,7 @@ pd-kv-fault/
 
 ### 1. 先准备一个正常的 P/D 服务环境
 
-先验证无工具时真实 KV 传输成功、D继续生成。只支持独占开发服务，首版 D=1个
+以下是v0.1兼容用法：先验证无工具时真实 KV 传输成功、D继续生成。只支持独占开发服务，首版 D=1个
 worker、并发=1、无其他请求。**不要用于共享/公开服务。**
 
 P 使用原启动方式，不加载本工具。D保留原模型、原 `--kv-transfer-config`、原

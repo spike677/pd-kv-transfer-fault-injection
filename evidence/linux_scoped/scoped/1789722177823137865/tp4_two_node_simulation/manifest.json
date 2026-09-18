@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "arm_id": "49b3a867ec644692882035f4b2d18b37",
+  "deployment_id": "deployment",
+  "engine_base_id": "D0",
+  "role": "decode",
+  "mode": "RET_NEG1",
+  "participants": [
+    {
+      "node_id": "nodeA",
+      "dp_rank": 0,
+      "pp_rank": 0,
+      "tp_rank": 0
+    },
+    {
+      "node_id": "nodeA",
+      "dp_rank": 0,
+      "pp_rank": 0,
+      "tp_rank": 1
+    },
+    {
+      "node_id": "nodeB",
+      "dp_rank": 0,
+      "pp_rank": 0,
+      "tp_rank": 2
+    },
+    {
+      "node_id": "nodeB",
+      "dp_rank": 0,
+      "pp_rank": 0,
+      "tp_rank": 3
+    }
+  ],
+  "expected_tp_size": 4,
+  "created_at": 1789722178.8195477,
+  "expires_at": 1789722298.8195477,
+  "ttl_seconds": 120,
+  "request_selector": {
+    "mode": "next_transfer",
+    "request_id": null,
+    "isolated_single_request": true
+  }
+}

@@ -4,6 +4,7 @@ import io
 import json
 import logging
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -48,7 +49,8 @@ native.logger.removeHandler(handler)
 for text in ('Mooncake transfer failed for request','Failed to transfer KV cache for request',
              'RuntimeError: Mooncake transfer failed, ret: -1','fault_injected=true'):
     assert text in stream.getvalue()
-summary=dict(tests_passed=19,source_sha256=SOURCE_SHA256,
+count=int(re.search(rb'Ran (\d+) tests',test.stdout)[1])
+summary=dict(tests_passed=count,source_sha256=SOURCE_SHA256,
     evidence_level='PINNED_NATIVE_METHODS_HOST_FIXTURE',ret_neg1_native_log_chain='PASS',
     bfr=rows,model_e2e='NOT_TESTED',current_github_main='UNSUPPORTED',
     old_handler_still_marks_finished=True)

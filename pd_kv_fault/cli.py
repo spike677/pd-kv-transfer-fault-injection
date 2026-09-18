@@ -1,9 +1,16 @@
 import argparse
 import json
 import os
+import sys
 from .control import Control
 
 def main():
+    if len(sys.argv)>1 and (sys.argv[1] in ('plan','arm-local','status-local','disarm-local','aggregate')
+        or (sys.argv[1] in ('arm','status','disarm') and ('--all-tp-ranks' in sys.argv or '--engine-base' in sys.argv or os.getenv('PD_FAULT_ENGINE_BASE')))):
+        from .cli_v2 import main as v2
+        args=sys.argv[1:]
+        args[0]={'status':'status-local','disarm':'disarm-local'}.get(args[0],args[0])
+        return v2(args)
     p=argparse.ArgumentParser()
     p.add_argument('action',choices=['arm','disarm','status'])
     p.add_argument('--directory',default=os.getenv('PD_FAULT_DIR'))

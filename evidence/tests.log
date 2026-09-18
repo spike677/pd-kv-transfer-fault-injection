@@ -17,8 +17,34 @@ test_race (test_runtime.Tests.test_race) ... ok
 test_sitecustomize_startup (test_runtime.Tests.test_sitecustomize_startup) ... ok
 test_wrong_engine (test_runtime.Tests.test_wrong_engine) ... ok
 test_wrong_request (test_runtime.Tests.test_wrong_request) ... ok
+test_aggregator_does_not_count_forged_or_mixed (test_scoped.ScopeTests.test_aggregator_does_not_count_forged_or_mixed) ... ok
+test_aggregator_duplicate_input_files (test_scoped.ScopeTests.test_aggregator_duplicate_input_files) ... ok
+test_claim_without_override (test_scoped.ScopeTests.test_claim_without_override) ... ok
+test_cli_plan_arm_aggregate (test_scoped.ScopeTests.test_cli_plan_arm_aggregate) ... ok
+test_disarm_before_override (test_scoped.ScopeTests.test_disarm_before_override) ... ok
+test_duplicate (test_scoped.ScopeTests.test_duplicate) ... ok
+test_engine_matching (test_scoped.ScopeTests.test_engine_matching) ... ok
+test_exact_selector (test_scoped.ScopeTests.test_exact_selector) ... ok
+test_expiry (test_scoped.ScopeTests.test_expiry) ... ok
+test_mixed_restart (test_scoped.ScopeTests.test_mixed_restart) ... ok
+test_multinode_four_and_partial (test_scoped.ScopeTests.test_multinode_four_and_partial) ... ok
+test_multiprocessing_tp2 (test_scoped.ScopeTests.test_multiprocessing_tp2) ... ok
+test_replay (test_scoped.ScopeTests.test_replay) ... ok
+test_restart_after_disarm (test_scoped.ScopeTests.test_restart_after_disarm) ... ok
+test_restart_during_arm (test_scoped.ScopeTests.test_restart_during_arm) ... ok
+test_role_crosscheck (test_scoped.ScopeTests.test_role_crosscheck) ... ok
+test_size_mismatch (test_scoped.ScopeTests.test_size_mismatch) ... ok
+test_stale_registration_process (test_scoped.ScopeTests.test_stale_registration_process) ... ok
+test_topology_incomplete (test_scoped.ScopeTests.test_topology_incomplete) ... ok
+test_tp1 (test_scoped.ScopeTests.test_tp1) ... ok
+test_tp2_completion (test_scoped.ScopeTests.test_tp2_completion) ... ok
+test_unknown_rank (test_scoped.ScopeTests.test_unknown_rank) ... ok
+test_wrong_deployment (test_scoped.ScopeTests.test_wrong_deployment) ... ok
+test_wrong_engine (test_scoped.ScopeTests.test_wrong_engine) ... ok
+test_wrong_node (test_scoped.ScopeTests.test_wrong_node) ... ok
+test_wrong_request (test_scoped.ScopeTests.test_wrong_request) ... ok
 
 ----------------------------------------------------------------------
-Ran 19 tests in 0.476s
+Ran 45 tests in 5.410s
 
 OK

@@ -1,0 +1,19 @@
+{
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-09-18T09:08:51.227167243Z",
+    "FinishedAt": "2026-09-18T09:09:01.247435336Z"
+  },
+  "network_mode": "none",
+  "devices": [],
+  "image": "sha256:40417662a1ffe1e33cf3b1bc30bdcff79e030b771bc41372f6218fb3a659d057",
+  "evidence_level": "CPU_ONLY_NO_NPU"
+}

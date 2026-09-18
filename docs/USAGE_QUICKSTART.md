@@ -1,5 +1,8 @@
 # 使用速查（叠加到已有正常 D 服务）
 
+> 本页保留v0.1单worker兼容用法。TP2及schema v2请使用
+> [MULTI_RANK_MULTI_NODE.md](MULTI_RANK_MULTI_NODE.md)，不可沿用一claim即消费的旧模式。
+
 前置条件：独占开发服务、单D worker、并发1、无在途请求、正常P→D传输已验证。
 本仓库的在线启动路径仍待现场验证。不要跳过正常基线，直接用故障日志宣称成功。
 

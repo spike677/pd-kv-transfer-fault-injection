@@ -1,0 +1,58 @@
+{
+  "tp2": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "a71f89b4c38f4b1b9f46d2e511f8a742",
+    "expected": 2,
+    "overridden": 2,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_two_node_simulation": {
+    "status": "GLOBAL_COMPLETED",
+    "arm_id": "2731a6d3f8f54795899e7010e4286b22",
+    "expected": 4,
+    "overridden": 4,
+    "missing_participants": [],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "tp4_missing_one": {
+    "status": "PARTIAL",
+    "arm_id": "2731a6d3f8f54795899e7010e4286b22",
+    "expected": 4,
+    "overridden": 3,
+    "missing_participants": [
+      "deployment/D0/nodeB/dp0/pp0/tp3"
+    ],
+    "errors": [],
+    "requests": [
+      [
+        "D-request",
+        "P-request"
+      ]
+    ],
+    "rejections": [],
+    "evidence_level": "CONTROL_EVENTS_ONLY",
+    "model_e2e": "NOT_INFERRED"
+  },
+  "evidence_level": "MULTIPROCESS_PINNED_NATIVE_METHODS_HOST_FIXTURE",
+  "a3_single_node_tp2_e2e": "BLOCKED_NO_A3_CONNECTION",
+  "multi_node_hardware_e2e": "NOT_CLAIMED"
+}

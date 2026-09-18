@@ -19,8 +19,12 @@ class EngineView:
     def batch_transfer_sync_read(self,*args,**kwargs):
         self.hits+=1
         if self.hits!=1:raise RuntimeError('unexpected second read on one-shot facade')
-        self.control.emit('return_override',arm_id=self.claim['arm_id'],ret=-1,
-            request_id=self.meta['request_id'],remote_request_id=self.meta['remote_request_id'],fault_injected=True)
+        if hasattr(self.control,'confirm_override'):
+            if not self.control.confirm_override(self.claim):
+                return self.real.batch_transfer_sync_read(*args,**kwargs)
+        else:
+            self.control.emit('return_override',arm_id=self.claim['arm_id'],ret=-1,
+                request_id=self.meta['request_id'],remote_request_id=self.meta['remote_request_id'],fault_injected=True)
         # Only the provenance marker is ours; native transfer/handler code
         # produces both canonical error messages and RuntimeError traceback.
         self.logger.warning('[PD-KV-FAULT] fault_injected=true mode=RET_NEG1 arm_id=%s request_id=%r remote_request_id=%r',
@@ -68,11 +72,22 @@ class Binding:
         wrapped._pd_kv_fault_owner=control.owner
         self.wrapper=wrapped
         setattr(cls,METHOD,wrapped)
-        control.emit('installed',method=METHOD,source_sha256=SOURCE_SHA256)
+        self.original_init=None
+        if hasattr(control,'register'):
+            self.original_init=cls.__init__
+            @functools.wraps(self.original_init)
+            def registered_init(receiver,*args,**kwargs):
+                self.original_init(receiver,*args,**kwargs)
+                control.register(receiver)
+            self.init_wrapper=registered_init
+            cls.__init__=registered_init
+        control.emit('hook_ready' if self.original_init else 'installed',method=METHOD,source_sha256=SOURCE_SHA256)
     def uninstall(self):
         with self.lock:
             if getattr(self.cls,METHOD) is not self.wrapper:raise RuntimeError('ownership lost')
+            if self.original_init and self.cls.__init__ is not self.init_wrapper:raise RuntimeError('constructor ownership lost')
             if self.inflight:raise RuntimeError('receive in flight')
             self.control.disarm();self.active=False
             setattr(self.cls,METHOD,self.original)
+            if self.original_init:self.cls.__init__=self.original_init
             self.control.emit('uninstalled')

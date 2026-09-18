@@ -68,6 +68,8 @@ class Control:
             self.emit('disarmed')
 
     def claim(self,receiver,meta):
+        if getattr(receiver,'tp_size',1)!=1:
+            return None  # v1 compatibility is TP1 only; use ScopedControl for TP2.
         if (receiver.local_engine_id!=self.engine or not meta.get('local_block_ids')
             or not meta.get('remote_block_ids') or not meta.get('request_id')
             or not meta.get('remote_request_id')):return None
